@@ -50,7 +50,7 @@
 	--baby-blue-cfc: rgb(0, 174, 239);
 	--bbq-orange-cfc: rgb(241, 91, 39);
 	--text-light-orange: rgb(247, 148, 33);
-	--text-bbq-brown: rgb(98,59,17);
+	--text-bbq-brown: rgb(60,34,6);
 	--text-passion-blue: rgb(118, 154, 168);
 }
 
@@ -126,7 +126,8 @@ nav {
   text-align: center;
   padding: 10px 6px;
   text-decoration: none;
-  font-size: 1.7em;
+  font-size: 1.5em;
+  text-shadow: 0 0 1px var(--bbq-orange-cfc);
   transition: font-size 0.1s ease-in-out;
 }
 .navbar a.btn.secondary {
@@ -207,6 +208,12 @@ nav {
   min-width: 44px; /* Apple's recommended touch target */
   min-height: 44px;
   z-index:120;
+  transition: all 0.2s ease-in-out;
+}
+.menu-toggle:hover, 
+.menu-toggle:focus-within,
+.menu-toggle:active {
+	color: red;
 }
 /* The dropdown container */
 .dropdown {
@@ -469,11 +476,23 @@ nav {
 }
 #cta-block .flex {
 	align-items: flex-end;
-	align-items: center;
+	align-items: start;
 	font-size: 1.4rem;
 }
 #cta-block .flex h2 {
 	font-family: 'Heavitas';
+	text-align: center;
+	padding-top: 30px;
+  	padding-right: 20px;
+	text-shadow: 0 0 1px rgb(30, 30, 30);
+}
+#cta-block .flex .cta-tagline {
+	color: var(--text-bbq-brown);
+	font-weight: 800;
+	font-style: italic;
+	font-family: 'Signifier';
+	text-align: center;
+	padding-right: 20px;
 }
 #cta-block .flex div {
 	flex: 50%;
@@ -634,6 +653,7 @@ nav {
 	font-weight: 800;
 	font-size: 1.9rem;
 	color: rgb(80,80,80);
+	margin-bottom: 12px;
 }
 #contact-section #contact-info .phone-number span a {
 	color: rgb(80,80,80);
@@ -855,7 +875,7 @@ footer {
 }
 @media screen and (max-width: 900px) {
 	#navbar-container {
-  		height: 400px;
+  		height: 330px;
 	}
 }
 @media screen and (max-width: 860px) {
@@ -901,6 +921,12 @@ footer {
 	}
 	#cta-block .flex h2 {
 		text-align: center;
+	}
+	#cta-block .flex h2 {
+		padding-top: 0;
+	}
+	#cta-block .flex .cta-tagline {
+		padding-bottom: 35px;
 	}
 }
 @media screen and (max-width: 600px) {
