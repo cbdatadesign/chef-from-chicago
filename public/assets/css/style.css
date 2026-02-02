@@ -671,6 +671,9 @@ footer {
 #contact-info {
 	scroll-margin-top: 320px;
 }
+.underline-accent {
+	text-decoration: underline var(--text-light-orange) 2px;
+}
 /******* @layer Queries ************/
 @layer components {
   .logo-container {
