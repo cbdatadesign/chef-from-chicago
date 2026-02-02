@@ -229,6 +229,7 @@ nav {
   border-radius: 1px;
   outline: none;
   color: var(--text-menu-bar-yellow);
+  text-shadow: 0 0 1px black;
   padding: 2px 15px;
   background-color: inherit;
   font-family: inherit; /* Important for vertical align on mobile phones */
@@ -240,7 +241,7 @@ nav {
 .dropdown:hover .dropbtn,
 .dropdown:focus-within .dropbtn,
 .dropdown:active .dropbtn {
-  background-color: var(--baby-blue-cfc);
+  background-color: var(--baby-blue-cfc);io
   color: var(--dark-blue-cfc);
 }
 
