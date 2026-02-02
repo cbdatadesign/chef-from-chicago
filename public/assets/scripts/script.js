@@ -26,90 +26,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// 2. Resize and Dock elements on Scroll
 	const logo = document.querySelector("a .logo");
-	const smallLogo = document.querySelector("a .small-logo");
 	const navBar = document.querySelector(".navbar");
-	const mapTitle = document.querySelector(".map-name");
-	const mapSubTitle = document.querySelector(".map-sub-title");
+	const navWhiteBar = document.querySelector(".navbar-white-space");
 
 	window.addEventListener("scroll", function () {
+		const scrollY = window.scrollY;
+
 		if (window.scrollY > 20) {
 			logo.classList.add("shrink");
 			navBar.classList.add("shrink-navbar");
-			myHeader.classList.add("fade-and-shrink-hdr");
-			myHeaderBtn.classList.add("shrink-hdr");
-			myNavPrimary.classList.add("shrink-nav");
-			// navBarText.classList.add("shrink-nav-text");
-		} if (window.scrollY > 40) {
-			mapTitle.classList.add("stick");
-			mapSubTitle.classList.add("stick-sub");
+		} 
+		if (this.window.scrollY > 40) {
+			navWhiteBar.classList.add("give-shadow");
 		}
 		else {
 			logo.classList.remove("shrink");
 			navBar.classList.remove("shrink-navbar");
-			mapTitle.classList.remove("stick");
-			mapSubTitle.classList.remove("stick-sub");
-			myHeader.classList.remove("fade-and-shrink-hdr");
-			myHeaderBtn.classList.remove("shrink-hdr");
-			myNavPrimary.classList.remove("shrink-nav");
+			navWhiteBar.classList.remove("give-shadow");
+			// ctaBlock.classList.remove("give-margin");
 			// navBarText.classList.remove("shrink-nav-text");
 		}
 	});
-
-	// 3.  Interactive maps //
-	var districtsMap = document.getElementById("districts-polygon-map"),
-		districtInfo = document.getElementById("district-info"),
-		alldistricts = districtsMap.querySelectorAll("g");
-	console.log(districtsMap, "Districts Map");
-	districtsMap.addEventListener("click", function (e) {
-		console.log("test click");
-		var district = e.target.parentNode;
-		if (e.target.nodeName == "path") {
-			if (district.classList.contains('active')) {
-				district.classList.remove("active");
-				districtInfo.innerHTML = "";
-				return;
-			}
-			for (var i = 0; i < alldistricts.length; i++) {
-				alldistricts[i].classList.remove("active");
-			}
-			district.classList.add("active");
-			var districtName = district.querySelector("title").innerHTML,
-				districtParagraph = district.querySelector("desc p");
-			sourceImg = district.querySelector("img"),
-				imgPath = "https://cbdatadesign.com/wp-content/uploads/2023/07/";
-			districtInfo.innerHTML = "";
-			districtInfo.insertAdjacentHTML("afterbegin", "<img src=" + imgPath + sourceImg.getAttribute('xlink:href') + " alt='" + sourceImg.getAttribute('alt') + "'><h1>" + districtName + "</h1><p>" + districtParagraph.innerHTML + "</p>");
-			districtInfo.classList.add("show");
-		}
-		const isSmallViewport = window.innerWidth <= 768; // Adjust breakpoint as needed
-
-		if (isSmallViewport) {
-			// Small delay to ensure pop-up is rendered first
-			setTimeout(() => {
-				window.scrollBy({
-					top: 800,
-					behavior: 'smooth'
-				});
-			}, 500);
-		}
-	});
-
-	/* Adjust viewBox sizing */
-	var districtsMap = document.getElementById("districts-polygon-map");
-	const defaultScreenMap = '50 000 1200 922';
-	const mediumScreenMap = '200 000 1200 922';
-	const smallScreenMap = '400 5 500 1022';
-
-	if (window.innerWidth < 800) {
-		console.log("Small screen - Viewbox changed to:", smallScreenMap);
-		districtsMap.setAttribute('viewBox', smallScreenMap);
-	} else if (window.innerWidth < 1050) {
-		console.log("Medium screen - Viewbox changed to:", mediumScreenMap);
-		districtsMap.setAttribute('viewBox', mediumScreenMap);
-	} else {
-		console.log("Default screen - Viewbox changed to:", defaultScreenMap);
-		districtsMap.setAttribute('viewBox', defaultScreenMap);
-	}
 });
 
 
