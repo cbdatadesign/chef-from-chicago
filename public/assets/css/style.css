@@ -695,6 +695,17 @@ footer {
 	font-size: 1.3rem;
 	font-style: italic;
 }
+.footer-envelope .tagline.cb {
+	font-style: normal;
+	font-size: 0.8rem;
+}
+.footer-envelope .tagline.cb a {
+	color: rgba(165,165,165,1);
+	text-decoration: none;
+}
+.footer-envelope .tagline.cb a:hover {
+	color: rgb(242, 204, 143);
+}
 #menu-dropdown-section,
 #about-section{
 	scroll-margin-top: 280px;
