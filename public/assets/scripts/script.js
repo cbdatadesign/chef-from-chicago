@@ -23,6 +23,14 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	});
 
+	// NEW: Close menu when clicking any navigation link
+    const navLinksItems = navLinks.querySelectorAll('a');
+    navLinksItems.forEach(link => {
+        link.addEventListener('click', function() {
+            navLinks.classList.remove('active');
+            console.log('Navigation link clicked, menu closing');
+        });
+    });
 
 	// 2. Resize and Dock elements on Scroll
 	const logo = document.querySelector("a .logo");
