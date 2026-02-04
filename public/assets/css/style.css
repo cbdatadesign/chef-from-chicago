@@ -596,7 +596,7 @@ nav {
 	font-size: 1.3rem;
 	color: rgba(10,10,10,1);
 	font-family: 'heavitas';
-	padding-top: 37px;
+	padding-top: 40px;
 	padding-left: 50px;
 	font-family: 'Avenir';
 }
@@ -609,8 +609,8 @@ nav {
 .fa-solid {
   font-weight: 900;
   position: absolute;
-  right: 10px;
-  top: 20px;
+  right: 15px;
+  top: 15px;
   font-size: 1.4rem;
   transition: transform 0.3s ease;
   cursor: pointer;
@@ -688,10 +688,12 @@ footer {
 	font-size: 1.4rem;
 	font-family: 'Heavitas';
 	}
-.footer-envelope .tagline {
+.footer-envelope .tagline,
+#contact-info .tagline {
 	font-family: 'Avenir';
 	font-size: 1.3rem;
 	font-style: italic;
+	color: var(--dark-blue-cfc);
 }
 .footer-envelope .tagline.cb {
 	font-style: normal;
@@ -811,6 +813,9 @@ footer {
 @media screen and (max-width: 1075px) {
 	.navbar {
 		height: 125px;
+	}
+	.navbar-white-space {
+		top: 125px;
 	}
 	.nav-links {
 		display: none;
@@ -934,6 +939,10 @@ footer {
   }
 }
 @media screen and (max-width: 650px) {
+	nav div .logo {
+		left: 0;
+		right: unset;
+	}
 	 .block {
 		width: 100vw;
 	 }
@@ -963,18 +972,23 @@ footer {
 	}
 }
 @media screen and (max-width: 600px) {
+	.logo.shrink {
+		width: 250px;
+	}
 	nav div .logo {
-		width: 340px;
 		z-index: 103;
 		top: 10px;
 	}
 	#navbar-container {
 		height: 200px;
 	}
-	  .navbar {
+	.navbar {
 		height: 80px;
 	}
-
+	.navbar-white-space {
+		top: 80px;
+		height: 50px;
+	}
 }
 @media screen and (max-width: 550px) {
 	#contact-section h3 {
@@ -989,12 +1003,19 @@ footer {
 	.footer-envelope .tagline {
 		font-size: 1rem;
 	}
-	
+	#menu-dropdown-section #menu-items div p {
+		padding-left: 25px;
+		padding-right: 25px;
+	}
 }
 @media screen and (max-width: 500px) {
+	header nav {
+		height: 175px;
+	}
 	nav div .logo {
-		top: 56px;
-		z-index: 103;
+		width: 300px;
+		left: 0;
+		right: unset;
 	}
 	#menu-toggle span {
 		z-index: 104;
