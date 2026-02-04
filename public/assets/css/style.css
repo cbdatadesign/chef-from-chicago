@@ -699,6 +699,7 @@ footer {
 .footer-envelope .tagline.cb {
 	font-style: normal;
 	font-size: 0.8rem;
+	font-family: 'Avenir';
 }
 .footer-envelope .tagline.cb a {
 	color: rgba(165,165,165,1);
@@ -998,7 +999,10 @@ footer {
 	.navbar {
 		height: 80px;
 	}
-
+  	.navbar-white-space {
+    top: 60px;
+    height: 80px;
+	}
 }
 @media screen and (max-width: 550px) {
 	#contact-section h3 {
