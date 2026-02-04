@@ -49,7 +49,7 @@
 	--dark-blue-cfc: rgb(0, 0, 61);
 	--baby-blue-cfc: rgb(0, 174, 239);
 	--bbq-orange-cfc: rgb(241, 91, 39);
-	--text-light-orange: rgb(247, 148, 33);
+	--text-light-orange: rgb(244, 159, 61);
 	--text-bbq-brown: rgb(60,34,6);
 	--text-passion-blue: rgb(118, 154, 168);
 	--text-menu-bar-yellow: rgb(255,246,211);
@@ -156,7 +156,7 @@ nav {
 .shrink {
 	width: 30vw;
 	position: fixed;
-	top: 30px;
+	top: 50px;
 	left: 25px;
 }
 .shrink-navbar {
@@ -532,8 +532,8 @@ nav {
 	flex: 50%;
 	z-index: 3;
 	flex-shrink: 0;
-	min-width: 300px;
-	max-width: 400px;
+	min-width: 200px;
+	max-width: 350px;
 }
 #about-section {
 	margin-top: 70px;
@@ -629,6 +629,7 @@ nav {
 	font-size: 1.9em;
 	color: var(--text-passion-blue);
 	font-family: 'Heavitas';
+	margin-bottom: 15px;
 }
 #contact-section h3 .underline {
 	text-decoration: underline solid orange 4px;
@@ -689,7 +690,7 @@ footer {
 	font-family: 'Heavitas';
 	}
 .footer-envelope .tagline {
-	font-family: 'Avenir';
+	font-family: 'Signifier';
 	font-size: 1.3rem;
 	font-style: italic;
 }
@@ -805,7 +806,7 @@ footer {
 		display: block;
 		width: 90vw;
     	max-width: 100%;
-		margin: 0 30px 50px 3vw;
+		margin: 0 30px 50px 1vw;
 	}
 }
 @media screen and (max-width: 1075px) {
@@ -837,6 +838,9 @@ footer {
 		padding: 10px 0;
 		margin: 0 auto;
 	  }
+	  .navbar-white-space {
+		top: 120px;
+	  }
 	.dropdown-content {
 		width: 100%;
 	}
@@ -865,6 +869,15 @@ footer {
 	}
 		.block {
 		width: 90vw;
+	}
+}
+@media screen and (max-width: 1000px) {
+	#cta-block .flex h2 {
+		padding-top: 0;
+		margin-top:10px;
+	}
+	#cta-block .flex .cta-tagline {
+		font-size: 1.2rem;
 	}
 }
 @media screen and (max-width: 950px) {
@@ -974,7 +987,10 @@ footer {
 	  .navbar {
 		height: 80px;
 	}
-
+	.navbar-white-space {
+		height: 110px;
+		top: 80px;
+	}
 }
 @media screen and (max-width: 550px) {
 	#contact-section h3 {
@@ -995,6 +1011,10 @@ footer {
 	nav div .logo {
 		top: 56px;
 		z-index: 103;
+	}
+	#menu-dropdown-section #menu-items div p {
+		padding-left: 20px;
+		font-size: 1.2rem;
 	}
 	#menu-toggle span {
 		z-index: 104;
