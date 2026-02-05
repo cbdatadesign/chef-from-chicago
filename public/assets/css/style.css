@@ -701,6 +701,7 @@ footer {
 	font-style: normal;
 	font-size: 0.8rem;
 	font-family: 'Avenir';
+	padding-bottom: 17px;
 }
 .footer-envelope .tagline.cb a {
 	color: rgba(165,165,165,1);
