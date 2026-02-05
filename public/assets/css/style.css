@@ -622,7 +622,7 @@ nav {
 	margin-top: 200px;
 }
 #contact-section div {
-	margin-top: 100px;
+	margin-top: 70px;
 }
 #contact-section h3 {
 	text-align: center;
@@ -649,8 +649,8 @@ nav {
 }
 .line-break {
 	height: 4px;
-	width: 40vw;
-	margin-left: 30vw;
+	width: 50vw;
+	margin-left: 25vw;
 	margin-top: 25px;
 	background: #f5f2f2;
 	background: linear-gradient(148deg,rgb(245, 242, 242) 0%, rgb(224, 224, 224) 99%);
@@ -680,7 +680,7 @@ footer {
 }
 .footer-envelope {
 	width: 100%;
-	min-height: 250px;
+	min-height: 170px;
 	margin: 0 auto;
 	padding-top: 39px;
 	background-color: rgb(244,244,244);
@@ -695,6 +695,7 @@ footer {
 	font-size: 1.3rem;
 	font-style: italic;
 	color: var(--dark-blue-cfc);
+	padding-top: 30px;
 }
 .footer-envelope .tagline.cb {
 	font-style: normal;
